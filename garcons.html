@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garçons - Restaurante do Arthur</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body onload="inicializarPagina('garcons')">
+
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <div class="logo-area">
+        <h1>Restaurante do Arthur</h1>
+        <p>Módulo de Garçons</p>
+      </div>
+
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="mesas.html">Mesas</a>
+        <a href="garcons.html">Garçons</a>
+        <a href="pedidos.html">Pedidos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina-interna">
+    <div class="container">
+      <section class="titulo-pagina">
+        <h2>Cadastro de Garçons</h2>
+        <p>Gerencie a equipe de atendimento do restaurante.</p>
+      </section>
+
+      <section class="crud-grid">
+        <div class="card-form">
+          <h3>Formulário</h3>
+          <form id="formGarcom">
+            <input type="hidden" id="garcomId" />
+
+            <label for="garcomNome">Nome</label>
+            <input type="text" id="garcomNome" placeholder="Digite o nome" required />
+
+            <label for="garcomTelefone">Telefone</label>
+            <input type="text" id="garcomTelefone" placeholder="Digite o telefone" required />
+
+            <label for="garcomTurno">Turno</label>
+            <select id="garcomTurno" required>
+              <option value="">Selecione</option>
+              <option value="MANHA">MANHÃ</option>
+              <option value="TARDE">TARDE</option>
+              <option value="NOITE">NOITE</option>
+            </select>
+
+            <div class="acoes-form">
+              <button type="submit" class="btn-card">Salvar</button>
+              <button type="button" class="btn-neutro" onclick="limparFormularioGarcom()">Limpar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card-tabela">
+          <div class="topo-tabela">
+            <h3>Lista de Garçons</h3>
+            <input type="text" id="buscaGarcom" placeholder="Buscar por nome..." onkeyup="filtrarGarcons()" />
+          </div>
+
+          <div class="tabela-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nome</th>
+                  <th>Telefone</th>
+                  <th>Turno</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="tabelaGarcons"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="alertaContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

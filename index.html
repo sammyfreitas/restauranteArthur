@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurante do Arthur</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <div class="logo-area">
+        <h1>Restaurante do Arthur</h1>
+        <p>Sabor, conforto e organização em um só lugar</p>
+      </div>
+
+      <nav class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#modulos">Sistema</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="banner">
+    <div class="container banner-conteudo">
+      <div class="banner-texto">
+        <span class="tag">Projeto criado por Arthur Provenzano</span>
+        <h2>Seu sistema para restaurante presencial</h2>
+        <p>
+          Uma interface moderna e elegante para gerenciar clientes, mesas,
+          garçons e pedidos de forma prática e organizada.
+        </p>
+        <div class="botoes-banner">
+          <a href="#modulos" class="btn btn-principal">Ver módulos</a>
+          <a href="#contato" class="btn btn-secundario">Contato</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <div class="titulo-secao">
+        <h2>Sobre o projeto</h2>
+        <p>Layout base para o CRUD do restaurante presencial</p>
+      </div>
+
+      <div class="sobre-grid">
+        <div class="card-info">
+          <i class="fa-solid fa-utensils"></i>
+          <h3>Atendimento presencial</h3>
+          <p>
+            Estrutura pensada para restaurantes com foco em organização do salão
+            e experiência do cliente.
+          </p>
+        </div>
+
+        <div class="card-info">
+          <i class="fa-solid fa-chair"></i>
+          <h3>Controle de mesas</h3>
+          <p>
+            Cadastro e gerenciamento de mesas com número, capacidade e status.
+          </p>
+        </div>
+
+        <div class="card-info">
+          <i class="fa-solid fa-user-tie"></i>
+          <h3>Equipe de garçons</h3>
+          <p>
+            Registro dos garçons com informações úteis para o funcionamento do
+            restaurante.
+          </p>
+        </div>
+
+        <div class="card-info">
+          <i class="fa-solid fa-receipt"></i>
+          <h3>Pedidos</h3>
+          <p>
+            Relação entre cliente, mesa e garçom para acompanhar os pedidos com
+            mais clareza.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="modulos" class="modulos">
+    <div class="container">
+      <div class="titulo-secao claro">
+        <h2>Módulos do sistema</h2>
+        <p>Base visual para as páginas do CRUD</p>
+      </div>
+
+      <div class="modulos-grid">
+        <div class="modulo-card">
+          <div class="icone-modulo">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3>Clientes</h3>
+          <p>Cadastro, consulta, edição e exclusão de clientes.</p>
+          <button class="btn-card" onclick="mostrarMensagem('Clientes')"><a href="clientes.html" class="btn-card btn-link">Acessar</a></button>
+	
+        </div>
+
+        <div class="modulo-card">
+          <div class="icone-modulo">
+            <i class="fa-solid fa-table-cells-large"></i>
+          </div>
+          <h3>Mesas</h3>
+          <p>Controle das mesas do restaurante e sua disponibilidade.</p>
+          <button class="btn-card" onclick="mostrarMensagem('Mesas')"><a href="mesas.html" class="btn-card btn-link">Acessar</a></button>
+        </div>
+
+        <div class="modulo-card">
+          <div class="icone-modulo">
+            <i class="fa-solid fa-user-group"></i>
+          </div>
+          <h3>Garçons</h3>
+          <p>Gerenciamento da equipe de garçons e seus turnos.</p>
+          <button class="btn-card" onclick="mostrarMensagem('Garçons')"><a href="garcons.html" class="btn-card btn-link">Acessar</a></button>
+        </div>
+
+        <div class="modulo-card">
+          <div class="icone-modulo">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+          </div>
+          <h3>Pedidos</h3>
+          <p>Registro e acompanhamento dos pedidos do salão.</p>
+          <button class="btn-card" onclick="mostrarMensagem('Pedidos')"><a href="pedidos.html" class="btn-card btn-link">Acessar</a></button>
+        </div>
+      </div>
+
+      <div class="aviso-modulo" id="avisoModulo">
+        Clique em um módulo para conectar depois à tela correspondente.
+      </div>
+    </div>
+  </section>
+
+  <section class="destaque">
+    <div class="container destaque-conteudo">
+      <div>
+        <h2>Espaço para apresentação do restaurante</h2>
+        <p>
+          Aqui Arthur pode escrever a descrição do restaurante, o estilo da
+          culinária, os diferenciais da casa, horários de funcionamento e outras
+          informações institucionais.
+        </p>
+      </div>
+      <a href="#contato" class="btn btn-principal">Ver contato</a>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="container">
+      <div class="titulo-secao">
+        <h2>Contato e localização</h2>
+        <p>Informações do projeto e endereço fictício para alteração posterior</p>
+      </div>
+
+      <div class="contato-grid">
+        <div class="contato-card">
+          <h3>Informações</h3>
+          <p><strong>Projeto criado por:</strong> Arthur Provenzano</p>
+          <p><strong>E-mail:</strong> arthur@email.com.br</p>
+          <p><strong>Endereço:</strong> Rua X, 140 – Rio de Janeiro – RJ – CEP X</p>
+
+          <div class="redes">
+            <a href="https://wa.me/5521999999999" target="_blank" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/arthur/" target="_blank" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/arthur/?locale=pt_BR" target="_blank" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/arthur" target="_blank" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/arthur" target="_blank" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mapa-card">
+          <h3>Localização</h3>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps?q=Rua%20X%2C%20140%2C%20Rio%20de%20Janeiro%20RJ&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <p class="obs-mapa">
+            Endereço fictício. Arthur pode trocar depois pelo endereço real.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <p>© 2026 Restaurante do Arthur - Todos os direitos reservados.</p>
+      <p>Projeto visual para sistema CRUD de restaurante presencial.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
